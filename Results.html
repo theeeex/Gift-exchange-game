@@ -1,0 +1,37 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+
+<table class="table">
+  <tr>
+    <th> Offered Wage </th>
+    <th> Effort Level </th>
+    <th> You Received </th>
+  </tr>
+
+  <tr>
+    <td>{{ group.principal_wage_offer }}</td>
+    <td>{{ group.effort_agent }}</td>
+    <td>{{ player.payoff }}</td>
+  </tr>
+</table>
+
+<p>
+    Your total payoff is <b>{{ participant.payoff }}</b><br>
+    {% if player.role == 'principal' %}
+    <i>[1.5 * effort] - [wage offer]</i>
+    {% else %}
+    <i>[wage offer] - [effort² * 0.13]</i>
+    {% endif %}
+</p>
+
+    {% next_button %}
+
+{% include Constants.instruction_template %}
+
+{% endblock %}

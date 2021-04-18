@@ -1,0 +1,22 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Your role and decision
+{% endblock %}
+
+{% block content %}
+
+<p>You are the <b>agent</b>.</p>
+<p>The principal will make you a wage offer between 0 and 9.</p>
+<p>Please choose below how much effort you would return to each of the possible offers.</p>
+
+    {% formfields %}
+
+{% next_button %}
+
+{% include Constants.instruction_template %}
+
+
+
+{% endblock %}

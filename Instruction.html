@@ -1,0 +1,69 @@
+{% load otree static %}
+
+<div class="instructions well well-lg">
+    <h4>Instructions</h4>
+
+    <p>You have been randomly and anonymously paired with another player. Each of you be randomly assigned to the role of
+        "principal" and "agent". You will learn your role before making any decision.</p>
+
+    <p>The principal will propose a contract to the agent. The contract is a fixed wage between 0 and 9.</p>
+
+    <p>Meanwhile, the agent must decide how much effort, between 0 and 9, he/she would return for every possible wage
+        offer. The final outcome depends on the principal's wage offer and the agent's chosen effort level for this wage
+        offer.</p>
+
+    <p>Effort is costly only to the agent and determines the principal's revenue. The agent's effort cost and the
+        principal's revenue for each effort level are displayed in the table below. Below the table, the final payoffs
+        are specified.</p>
+
+
+    <table class="table">
+    <tr>
+        <th>Effort Level</th>
+        <td>0</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+    </tr>
+
+    <tr>
+        <th>Effort Cost</th>
+        <td>0.00</td>
+        <td>0.13</td>
+        <td>0.52</td>
+        <td>1.17</td>
+        <td>2.08</td>
+        <td>3.25</td>
+        <td>4.68</td>
+        <td>6.37</td>
+        <td>8.32</td>
+        <td>10.53</td>
+    </tr>
+
+    <tr>
+        <th>Principal's Revenue</th>
+        <td>0.0</td>
+        <td>1.5</td>
+        <td>3.0</td>
+        <td>4.5</td>
+        <td>6.0</td>
+        <td>7.5</td>
+        <td>9.0</td>
+        <td>10.5</td>
+        <td>12</td>
+        <td>13.5</td>
+    </tr>
+</table>
+
+    <p>The principal will receive:<br>
+        <b>(Principal's Revenue) - (Wage Offer)</b><br>
+        and the agent will receive:<br>
+        <b>(Wage Offer) - (Effort Cost)</b></p>
+
+</div>
